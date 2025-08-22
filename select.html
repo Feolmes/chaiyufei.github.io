@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>城市选择器</title>
+  <style>
+    select {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <label>选择城市：</label>
+  <select id="city" onchange="alert(this.value)">
+    <option value="bj">北京</option>
+    <option value="sh" selected>上海</option>
+    <option value="gz">广州</option>
+    <option value="sz">深圳</option>
+  </select>
+</body>
+</html>
