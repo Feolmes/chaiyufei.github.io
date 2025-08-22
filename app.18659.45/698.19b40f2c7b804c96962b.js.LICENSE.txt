@@ -1,0 +1,73 @@
+/*!
+    localForage -- Offline Storage, Improved
+    Version 1.9.0
+    https://localforage.github.io/localForage
+    (c) 2013-2017 Mozilla, Apache License 2.0
+*/
+
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*! ./../webpack/buildin/global.js */
+
+/*! ./interactivity */
+
+/*! ./webview */
+
+/*! base64-js */
+
+/*! buffer */
+
+/*! exports provided: ajaxPostJSON, ajaxPostFile, isInnerApp, isAndroid, isIOS, browser, default */
+
+/*! exports provided: default */
+
+/*! ieee754 */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! isarray */
+
+/*! no static exports found */
+
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+
+/*!************************!*\
+  !*** ./src/webview.js ***!
+  \************************/
+
+/*!******************************!*\
+  !*** ./src/interactivity.js ***!
+  \******************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/buffer/index.js ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/ieee754/index.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/isarray/index.js ***!
+  \***************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/base64-js/index.js ***!
+  \*****************************************/
