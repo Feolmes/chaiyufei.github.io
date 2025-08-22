@@ -1,20 +1,800 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="data:image/png;base64,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"
-      type="image/x-icon"
-    />
-    <title>猿编程 - 视频互动题</title>
-    <script type="module" crossorigin src="./javascript/index.js"></script>
-  </head>
-  <body>
-    <div id="app"></div>
-    <noscript>
-      <div>Please enable JavaScript to use this application.</div>
-    </noscript>
-  </body>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <!-- vConsole 在 Phaser 之前加载 -->
+    <script>
+        // 检查是否需要启用 vConsole
+        if (location.search.indexOf('console') > -1) {
+            document.write('<script src="../../template/vconsole.min.js"><\/script>');
+            document.write('<script>try { new VConsole(); console.log("vConsole 已启动"); } catch(e) { console.error("vConsole 初始化失败:", e); }<\/script>');
+        }
+    </script>
+
+    <!-- 启动覆盖层控制说明 -->
+    <!-- 
+    URL参数控制：
+    - ?console - 启用移动端调试控制台
+    - ?no-overlay - 隐藏启动覆盖层（直接启动游戏）
+    - 组合使用：?console&no-overlay - 启用调试并隐藏覆盖层
+    
+    使用示例：
+    1. 正常访问：game.html（显示启动覆盖层）
+    2. 启用调试：game.html?console
+    3. 隐藏覆盖层：game.html?no-overlay（直接启动游戏）
+    4. 同时启用：game.html?console&no-overlay
+    
+    说明：
+    - 默认情况下显示启动覆盖层，用户需要点击"开始体验"按钮
+    - 使用 ?no-overlay 参数可以跳过覆盖层，直接启动游戏
+    -->
+    <script src="./template/phaser.min.js"></script>
+    <title>rec--r0-z02--no8-war - 定制互动题</title>
+    <style>
+        /* 设置根元素字体大小 */
+        :root {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            :root {
+                font-size: 3.5vw;
+            }
+        }
+
+        body {
+            margin: 0;
+            background: #000;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            max-width: 100%;
+            max-height: 100%;
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        /* 加载指示器 */
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.125rem;
+            z-index: 999;
+        }
+
+        /* 悬浮按钮样式 */
+        .float-button {
+            position: fixed;
+            top: 2vh;
+            left: 2vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .float-button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+        }
+
+        /* 弹窗样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1001;
+            padding: 2vh;
+            box-sizing: border-box;
+        }
+
+        .modal.show {
+            display: flex !important;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem 2.5rem;
+            border-radius: 1.5rem;
+            max-width: 28rem;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 8vh;
+            left: 2vh;
+            box-sizing: border-box;
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: #666;
+            width: 3.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            text-align: center;
+        }
+
+        .modal h3 {
+            margin: 0 0 2.5rem;
+            font-size: 3rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .browser-tip-image {
+            width: 200px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        /* 浏览器图标样式 */
+        .browser-icon {
+            width: 8rem;
+            height: 8rem;
+            margin: 2.5rem auto;
+            display: block;
+        }
+
+        .browser-icon path {
+            fill: #3080E9;
+        }
+
+        /* 菜单图标样式 */
+        .menu-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            vertical-align: middle;
+            margin: 0 0.75rem;
+            display: inline-block;
+        }
+
+        .menu-icon path {
+            fill: #58595B;
+        }
+
+        /* 提示步骤样式 */
+        .tip-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            font-size: 2rem;
+            color: #333;
+            flex-wrap: wrap;
+            gap: 1rem;
+            line-height: 1.6;
+        }
+
+        .tip-steps .step {
+            margin: 0 0.5rem;
+        }
+
+        /* 游戏启动覆盖层样式 */
+        .game-start-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .game-start-overlay.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .start-content {
+            text-align: center;
+            color: white;
+            padding: 3rem;
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .start-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .start-content h2 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem;
+            font-weight: 500;
+        }
+
+        .start-content p {
+            font-size: 1.2rem;
+            margin: 0 0 2.5rem;
+            opacity: 0.9;
+        }
+
+        .start-button {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.3rem;
+            border-radius: 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 600;
+        }
+
+        .start-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .start-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .start-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .start-icon {
+                font-size: 4rem;
+            }
+
+            .start-content h2 {
+                font-size: 2rem;
+            }
+
+            .start-content p {
+                font-size: 1rem;
+            }
+
+            .start-button {
+                font-size: 1.1rem;
+                padding: 0.8rem 2rem;
+            }
+        }
+
+        /* 移动端适配 */
+        @media screen and (max-width: 768px) {
+            .float-button {
+                top: 2vh;
+                left: 2vh;
+                padding: 1rem 1.5rem;
+                font-size: 1.5rem;
+                border-radius: 2rem;
+            }
+
+            .modal-content {
+                padding: 2.5rem 2rem;
+                max-width: calc(100vw - 4vh);
+                top: 10vh;
+                left: 2vh;
+                right: 2vh;
+                width: auto;
+            }
+
+            .modal h3 {
+                font-size: 2.5rem;
+                margin: 0 0 2rem;
+            }
+
+            .tip-steps {
+                font-size: 1.75rem;
+                margin: 1.5rem 0;
+                gap: 1rem;
+            }
+
+            .browser-icon {
+                width: 7rem;
+                height: 7rem;
+                margin: 2rem auto;
+            }
+
+            .menu-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 0 0.5rem;
+            }
+
+            .modal-close {
+                font-size: 2.5rem;
+                width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+                right: 1rem;
+                top: 1rem;
+            }
+        }
+
+        /* 中等屏幕适配 */
+        @media screen and (max-width: 480px) {
+            .float-button {
+                padding: 0.875rem 1.375rem;
+                font-size: 1.375rem;
+            }
+
+            .modal-content {
+                max-width: calc(100vw - 3vh);
+                top: 9vh;
+                left: 1.5vh;
+                right: 1.5vh;
+            }
+
+            .modal h3 {
+                font-size: 2.25rem;
+            }
+
+            .tip-steps {
+                font-size: 1.625rem;
+            }
+
+            .browser-icon {
+                width: 6.5rem;
+                height: 6.5rem;
+            }
+
+            .menu-icon {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+        }
+
+        /* 超小屏幕适配 */
+        @media screen and (max-width: 320px) {
+            :root {
+                font-size: 4vw;
+            }
+
+            .float-button {
+                padding: 0.75rem 1.25rem;
+                font-size: 1.25rem;
+                top: 1.5vh;
+                left: 1.5vh;
+            }
+
+            .modal-content {
+                padding: 2rem 1.5rem;
+                top: 12vh;
+                left: 1.5vh;
+                right: 1.5vh;
+                max-width: calc(100vw - 3vh);
+            }
+
+            .modal h3 {
+                font-size: 2rem;
+                margin: 0 0 1.5rem;
+            }
+
+            .tip-steps {
+                font-size: 1.5rem;
+                margin: 1.25rem 0;
+                gap: 0.75rem;
+            }
+
+            .browser-icon {
+                width: 6rem;
+                height: 6rem;
+                margin: 1.5rem auto;
+            }
+
+            .menu-icon {
+                width: 2rem;
+                height: 2rem;
+                margin: 0 0.25rem;
+            }
+
+            .modal-close {
+                font-size: 2rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                right: 0.75rem;
+                top: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 悬浮按钮 - 只在iOS微信内显示 -->
+    <div class="float-button" id="helpButton" onclick="showModal()" style="display: none;">无法打开？</div>
+
+    <!-- 弹窗 - 只在iOS微信内显示 -->
+    <div class="modal" id="helpModal" onclick="hideModal(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="hideModal(event)">×</span>
+            <h3>无法正常打开？</h3>
+            <div class="tip-steps">
+                <span class="step">点击右上角</span>
+                <svg class="menu-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M188.2 507.2m-91.5 0a91.5 91.5 0 1 0 183 0 91.5 91.5 0 1 0-183 0Z"></path>
+                    <path d="M516.2 507.2m-91.5 0a91.5 91.5 0 1 0 183 0 91.5 91.5 0 1 0-183 0Z"></path>
+                    <path d="M836.5 507.2m-91.5 0a91.5 91.5 0 1 0 183 0 91.5 91.5 0 1 0-183 0Z"></path>
+                </svg>
+                <span class="step">选择「在浏览器中打开」</span>
+            </div>
+            <svg class="browser-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M512 885.76a392.2944 392.2944 0 1 1 392.192-392.192A392.6016 392.6016 0 0 1 512 885.76z m0-702.5664A310.3744 310.3744 0 1 0 822.6816 493.568 310.6816 310.6816 0 0 0 512 183.1936z">
+                </path>
+                <path
+                    d="M978.432 263.8848c-22.9376-46.6944-127.2832-36.5568-193.7408-11.3664l29.0816 76.5952c4.3008-1.6384 8.6016-3.1744 12.8-4.5056l-8.704 5.4272c-76.0832 47.0016-187.0848 107.1104-304.64 165.0688S280.2688 604.16 196.7104 636.1088l-2.1504 0.8192-30.72-49.5616C91.136 632.2176 22.4256 674.7136 46.3872 723.1488c9.216 18.8416 26.3168 26.112 48.3328 26.112 34.816 0 81.92-18.0224 131.072-36.5568 87.1424-33.0752 202.0352-84.1728 323.584-144.0768S781.6192 448.7168 860.8768 399.36c72.8064-44.544 141.5168-87.04 117.5552-135.4752zM125.7472 675.0208l24.064-26.624 11.3664 26.624z m739.7376-350.5152a98.304 98.304 0 0 0-18.2272-32.4608 152.1664 152.1664 0 0 1 57.0368-10.24 115.5072 115.5072 0 0 1-38.8096 42.7008z">
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- 加载指示器 -->
+    <div class="loading" id="loading">图纸加载中...</div>
+
+    <!-- 游戏启动覆盖层 -->
+    <div class="game-start-overlay" id="gameStartOverlay">
+        <div class="start-content">
+            <div class="start-icon">🚀</div>
+            <h2>准备开始体验</h2>
+            <p>点击下方按钮开始互动学习</p>
+            <button class="start-button" id="startGameBtn">✨ 开始体验</button>
+        </div>
+    </div>
+
+    <div id="app">
+        <div id="game-container"></div>
+    </div>
+
+    <script src="./javascript/index.js"></script>
+    <script>
+        // 检测是否需要显示启动覆盖层
+        function shouldShowStartOverlay() {
+            // 检查URL参数，如果指定 ?no-overlay 则隐藏启动覆盖层
+            // 默认情况下显示启动覆盖层
+            return location.search.indexOf('no-overlay') === -1;
+        }
+
+        // 用户交互状态
+        let userInteracted = false;
+        let gameInitialized = false;
+
+        // 初始化游戏
+        function initializeGame() {
+            if (gameInitialized) return;
+
+            console.log('🎮 初始化游戏...');
+            gameInitialized = true;
+
+            // 隐藏加载指示器
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                if (loading) loading.style.display = 'none';
+            }, 1000);
+
+            // 游戏配置
+            if (window['::::LIVE_CONTEXT::::']) {
+                const config = {
+                    width: 1920,
+                    height: 1440,
+                    scale: {
+                        mode: Phaser.Scale.FIT,
+                        autoCenter: Phaser.Scale.CENTER_BOTH
+                    },
+                    physics: {
+                        default: 'arcade'
+                    },
+                    dom: {
+                        createContainer: true
+                    },
+                    parent: 'game-container',
+                    transparent: false
+                };
+                const game = new Phaser.Game(config);
+                window.addScene(game, '../../projects/rec--r0-z02/rec--r0-z02--no8-war--20250818162845/', { logger: console.log });
+                setTimeout(() => {
+                    game.events.emit('interactionStart')
+                }, 500)
+            }
+
+            if (window['::::REC_CONTEXT::::']) {
+                const config = {
+                    width: 1920,
+                    height: 1080,
+                    scale: {
+                        mode: Phaser.Scale.FIT,
+                        autoCenter: Phaser.Scale.CENTER_BOTH
+                    },
+                    physics: {
+                        default: 'arcade'
+                    },
+                    dom: {
+                        createContainer: true
+                    },
+                    parent: 'game-container',
+                    transparent: false
+                };
+                const game = new Phaser.Game(config);
+                window.addScene(game, '../../projects/rec--r0-z02/rec--r0-z02--no8-war--20250818162845/', { logger: console.log });
+                setTimeout(() => {
+                    game.events.emit('questionStart')
+                }, 500)
+            }
+
+            // 通用游戏配置（如果没有特定上下文）
+            if (!window['::::LIVE_CONTEXT::::'] && !window['::::REC_CONTEXT::::']) {
+                const config = {
+                    width: 1920,
+                    height: 1440,
+                    scale: {
+                        mode: Phaser.Scale.FIT,
+                        autoCenter: Phaser.Scale.CENTER_BOTH
+                    },
+                    physics: {
+                        default: 'arcade'
+                    },
+                    dom: {
+                        createContainer: true
+                    },
+                    parent: 'game-container',
+                    transparent: false
+                };
+                const game = new Phaser.Game(config);
+                window.addScene(game, '../../projects/rec--r0-z02/rec--r0-z02--no8-war--20250818162845/', { logger: console.log });
+                setTimeout(() => {
+                    game.events.emit('interactionStart')
+                }, 500)
+            }
+        }
+
+        // 启动游戏函数
+        function startGame() {
+            console.log('🚀 用户点击启动游戏');
+            userInteracted = true;
+
+            // 隐藏启动覆盖层
+            const overlay = document.getElementById('gameStartOverlay');
+            if (overlay) {
+                overlay.classList.add('hide');
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500);
+            }
+
+            // 初始化游戏
+            initializeGame();
+        }
+
+        // 页面加载完成后的处理
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('gameStartOverlay');
+            const startBtn = document.getElementById('startGameBtn');
+
+            // 绑定启动按钮事件
+            if (startBtn) {
+                startBtn.addEventListener('click', startGame);
+            }
+
+            // 检测是否需要显示启动覆盖层
+            if (shouldShowStartOverlay()) {
+                console.log('🔍 需要显示启动覆盖层');
+                // 显示启动覆盖层
+                if (overlay) {
+                    overlay.style.display = 'flex';
+                }
+            } else {
+                console.log('📱 不需要显示启动覆盖层，直接启动游戏');
+                // 直接启动游戏
+                userInteracted = true;
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+                initializeGame();
+            }
+        });
+
+        // 备用方案：监听任何用户交互
+        function handleUserInteraction() {
+            if (!userInteracted && gameInitialized) {
+                console.log('💡 检测到用户交互，触发游戏事件');
+                userInteracted = true;
+
+                // 尝试重新触发游戏事件
+                setTimeout(() => {
+                    if (window.game && window.game.events) {
+                        if (window['::::LIVE_CONTEXT::::']) {
+                            window.game.events.emit('interactionStart');
+                        } else if (window['::::REC_CONTEXT::::']) {
+                            window.game.events.emit('questionStart');
+                        } else {
+                            window.game.events.emit('interactionStart');
+                        }
+                    }
+                }, 100);
+            }
+        }
+
+        // 监听各种用户交互事件
+        ['click', 'touchstart', 'keydown'].forEach(event => {
+            document.addEventListener(event, handleUserInteraction, { once: true });
+        });
+    </script>
+
+    <!-- iOS微信检测和弹窗控制脚本 -->
+    <script>
+        // 检测是否为iOS设备
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        // 检测是否为微信内置浏览器
+        function isWeixinBrowser() {
+            var isWeixin = false;
+
+            // 首先检查User Agent
+            if (/MicroMessenger/i.test(navigator.userAgent)) {
+                // 然后检查WeixinJSBridge
+                if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                    isWeixin = true;
+                } else {
+                    // 监听WeixinJSBridge准备就绪事件
+                    if (document.addEventListener) {
+                        document.addEventListener("WeixinJSBridgeReady", function () {
+                            isWeixin = true;
+                            checkAndShowHelpButton();
+                        }, false);
+                    } else if (document.attachEvent) {
+                        document.attachEvent("WeixinJSBridgeReady", function () {
+                            isWeixin = true;
+                            checkAndShowHelpButton();
+                        });
+                        document.attachEvent("onWeixinJSBridgeReady", function () {
+                            isWeixin = true;
+                            checkAndShowHelpButton();
+                        });
+                    }
+                }
+            }
+
+            return isWeixin;
+        }
+
+        // 检查并显示帮助按钮
+        function checkAndShowHelpButton() {
+            const helpButton = document.getElementById('helpButton');
+            const helpModal = document.getElementById('helpModal');
+
+            if (isIOS() && isWeixinBrowser()) {
+                // 在iOS微信环境中显示帮助按钮
+                if (helpButton) {
+                    helpButton.style.display = 'block';
+                }
+                // 确保弹窗处于可用状态但默认隐藏
+                if (helpModal) {
+                    helpModal.classList.remove('show');
+                }
+
+                console.log('检测到iOS微信环境，显示帮助按钮');
+            } else {
+                // 在其他环境中隐藏帮助按钮和弹窗
+                if (helpButton) {
+                    helpButton.style.display = 'none';
+                }
+                if (helpModal) {
+                    helpModal.classList.remove('show');
+                }
+
+                console.log('非iOS微信环境，隐藏帮助功能');
+            }
+        }
+
+        // 显示弹窗
+        function showModal() {
+            console.log('showModal');
+            const modal = document.getElementById('helpModal');
+            if (modal) {
+                modal.classList.add('show');
+            }
+        }
+
+        // 隐藏弹窗
+        function hideModal(event) {
+            console.log('hideModal');
+            const modal = document.getElementById('helpModal');
+            const modalContent = modal.querySelector('.modal-content');
+
+            // 如果点击的是模态框外部或关闭按钮，则关闭弹窗
+            if (event.target === modal || event.target.className === 'modal-close') {
+                modal.classList.remove('show');
+            }
+        }
+
+        // 页面加载完成后进行检测
+        window.addEventListener('load', function () {
+            // 延迟检测，确保微信环境完全初始化
+            setTimeout(function () {
+                checkAndShowHelpButton();
+            }, 500);
+        });
+
+        // 立即检测一次（如果WeixinJSBridge已经准备好）
+        checkAndShowHelpButton();
+    </script>
+</body>
+
 </html>
